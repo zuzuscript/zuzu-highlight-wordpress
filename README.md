@@ -13,6 +13,18 @@ The plugin enqueues `assets/zuzu-highlight.js`. The bundled browser script
 highlights matching `<pre class="zuzu-highlight">` blocks when the document
 loads.
 
+The plugin also enqueues `assets/zuzu-highlight-theme.css`, which overrides the
+default `zuzu-highlight-js` colours with the same light and dark code palette
+used by Zuzulang.org.
+
+## Settings
+
+In WordPress, go to **Settings > Zuzu Highlight** to choose the rendering mode:
+
+- Follow the visitor colour scheme
+- Always dark mode
+- Always light mode
+
 ## Development
 
 Refresh the vendored highlighter from the sibling source checkout:

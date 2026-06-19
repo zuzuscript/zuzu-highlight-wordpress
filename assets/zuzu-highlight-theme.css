@@ -1,0 +1,42 @@
+:root{
+	color-scheme: light;
+	--z-code-bg:#edf1f7;
+	--z-code-text:#172033;
+	--z-code-keyword:#7c4d00;
+	--z-code-string:#0f766e;
+	--z-code-literal:#9a3412;
+	--z-code-number:#9a3412;
+	--z-code-comment:#64748b;
+	--z-code-operator:#0369a1;
+	--z-code-punct:#6d28d9;
+	--z-code-ident:#172033;
+}
+
+body .zuzu-highlight{
+	color: var(--z-code-ident);
+	background: var(--z-code-bg);
+}
+body .zuzu-highlight .zuzu-hl-ident{ color: var(--z-code-ident); }
+body .zuzu-highlight .zuzu-hl-keyword{ color: var(--z-code-keyword); font-weight: 600; }
+body .zuzu-highlight .zuzu-hl-string{ color: var(--z-code-string); }
+body .zuzu-highlight .zuzu-hl-literal{ color: var(--z-code-literal); }
+body .zuzu-highlight .zuzu-hl-number{ color: var(--z-code-number); }
+body .zuzu-highlight .zuzu-hl-comment{ color: var(--z-code-comment); font-style: italic; }
+body .zuzu-highlight .zuzu-hl-operator{ color: var(--z-code-operator); }
+body .zuzu-highlight .zuzu-hl-punct{ color: var(--z-code-punct); }
+
+@media (prefers-color-scheme: dark){
+	:root{
+		color-scheme: dark;
+		--z-code-bg:#1f2430;
+		--z-code-text:#d9dde7;
+		--z-code-keyword:#ffcc66;
+		--z-code-string:#95e6cb;
+		--z-code-literal:#f29e74;
+		--z-code-number:#f29e74;
+		--z-code-comment:#7f8997;
+		--z-code-operator:#89ddff;
+		--z-code-punct:#c3a6ff;
+		--z-code-ident:#d9dde7;
+	}
+}
