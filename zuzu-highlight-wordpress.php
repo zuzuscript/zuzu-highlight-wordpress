@@ -22,7 +22,8 @@ const ZUZU_HIGHLIGHT_MODE_LIGHT  = 'light';
 
 add_action( 'wp_enqueue_scripts', 'zuzu_highlight_enqueue_script' );
 add_action( 'admin_init', 'zuzu_highlight_register_settings' );
-add_action( 'admin_menu', 'zuzu_highlight_add_options_page' );
+add_action( 'admin_menu', 'zuzu_highlight_add_hidden_options_page' );
+add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), 'zuzu_highlight_plugin_action_links' );
 
 /**
  * Enqueue the browser highlighter and theme override styles on public pages.
@@ -89,16 +90,35 @@ function zuzu_highlight_register_settings(): void {
 }
 
 /**
- * Add the plugin options page.
+ * Add the plugin options page without placing it in the main Settings menu.
  */
-function zuzu_highlight_add_options_page(): void {
-	add_options_page(
+function zuzu_highlight_add_hidden_options_page(): void {
+	add_submenu_page(
+		'plugins.php',
 		__( 'Zuzu Highlight', 'zuzu-highlight' ),
 		__( 'Zuzu Highlight', 'zuzu-highlight' ),
 		'manage_options',
 		'zuzu-highlight',
 		'zuzu_highlight_render_options_page'
 	);
+	remove_submenu_page( 'plugins.php', 'zuzu-highlight' );
+}
+
+/**
+ * Add a settings link to the plugin row on the Installed Plugins page.
+ *
+ * @param array<int|string, string> $links Existing plugin action links.
+ * @return array<int|string, string>
+ */
+function zuzu_highlight_plugin_action_links( array $links ): array {
+	$settings_link = sprintf(
+		'<a href="%s">%s</a>',
+		esc_url( admin_url( 'plugins.php?page=zuzu-highlight' ) ),
+		esc_html__( 'Settings', 'zuzu-highlight' )
+	);
+
+	array_unshift( $links, $settings_link );
+	return $links;
 }
 
 /**

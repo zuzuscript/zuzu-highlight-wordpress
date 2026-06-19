@@ -16,6 +16,10 @@ body .zuzu-highlight{
 	color: var(--z-code-ident);
 	background: var(--z-code-bg);
 }
+body pre.zuzu-highlight{
+	border-radius: .4rem;
+	padding: .75rem;
+}
 body .zuzu-highlight .zuzu-hl-ident{ color: var(--z-code-ident); }
 body .zuzu-highlight .zuzu-hl-keyword{ color: var(--z-code-keyword); font-weight: 600; }
 body .zuzu-highlight .zuzu-hl-string{ color: var(--z-code-string); }

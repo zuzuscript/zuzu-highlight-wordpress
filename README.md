@@ -19,7 +19,8 @@ used by Zuzulang.org.
 
 ## Settings
 
-In WordPress, go to **Settings > Zuzu Highlight** to choose the rendering mode:
+In WordPress, go to **Plugins > Installed Plugins > Zuzu Highlight > Settings**
+to choose the rendering mode:
 
 - Follow the visitor colour scheme
 - Always dark mode
