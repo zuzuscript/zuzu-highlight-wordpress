@@ -3,7 +3,7 @@
  * Plugin Name: Zuzu Highlight
  * Plugin URI: https://zuzulang.org/
  * Description: Adds ZuzuScript syntax highlighting to <pre class="zuzu-highlight"> blocks.
- * Version: 0.1.0
+ * Version: 0.7.0
  * Author: Toby Inkster
  * License: MIT
  * Text Domain: zuzu-highlight
