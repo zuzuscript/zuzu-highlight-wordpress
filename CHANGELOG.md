@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## Unreleased
 
+### Changed
+
+- Bundle the latest `zuzu-highlight-js` highlighter.
+
+## 0.1.0
+
 ### Added
 
 - Add the initial WordPress plugin wrapper for `zuzu-highlight-js`.
@@ -15,7 +21,3 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Link to the options page from the plugin row instead of the main WordPress
   Settings menu.
 - Add rounded corners and inner padding to highlighted `pre` blocks.
-
-### Changed
-
-- Bundle the latest `zuzu-highlight-js` highlighter.
